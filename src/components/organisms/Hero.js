@@ -17,16 +17,10 @@ const HeroSection = () => {
           </p>
           <div className='flex space-x-6'>
             <Link
-              href='#'
+              href='#products'
               className='bg-[#0e0e23] text-white px-6 py-2 rounded-md font-semibold hover:bg-black transition'
             >
               Get Started
-            </Link>
-            <Link
-              href='#'
-              className='text-red-500 font-medium flex items-center gap-1 hover:underline'
-            >
-              Learn More <span className='text-sm'>→</span>
             </Link>
           </div>
         </div>

@@ -1,6 +1,8 @@
 'use client';
 
+import { dataSite } from '@/data';
 import { motion } from 'framer-motion';
+import { random } from 'lodash';
 
 const services = [
   {
@@ -20,6 +22,24 @@ const services = [
   },
 ];
 
+const getRandomBgColor = () => {
+  const colors = [
+    'bg-green-100',
+    'bg-orange-100',
+    'bg-red-200',
+    'bg-blue-100',
+    'bg-purple-100',
+  ];
+  return colors[random(0, colors.length - 1)];
+};
+
+const newServices = dataSite.services.map((service, index) => ({
+  step: index + 1,
+  bg: getRandomBgColor(),
+  text: service.description,
+}));
+
+console.log('newServices', newServices);
 const itemVariants = {
   hidden: { opacity: 0, x: -40 },
   visible: (i) => ({
@@ -31,13 +51,16 @@ const itemVariants = {
 
 const Information = () => {
   return (
-    <section className='bg-[#0e0e23] text-white px-6 md:px-20 py-24 relative'>
+    <section
+      id='services'
+      className='bg-[#0e0e23] text-white px-6 md:px-20 py-24 relative'
+    >
       <h2 className='text-3xl md:text-4xl font-semibold text-center mb-16'>
         Our Best Included Services
       </h2>
 
       <div className='space-y-6 max-w-4xl mx-auto relative'>
-        {services.map((service, index) => (
+        {newServices.map((service, index) => (
           <motion.div
             key={index}
             custom={index}

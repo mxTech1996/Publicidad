@@ -15,10 +15,10 @@ const ConnectSection = () => {
           seamless across platforms.
         </p>
         <Link
-          href='#'
+          href='/more-information'
           className='inline-block bg-red-400 text-white px-6 py-2 rounded-md font-medium hover:bg-red-500 transition'
         >
-          Learn More
+          Contact Us
         </Link>
       </div>
 

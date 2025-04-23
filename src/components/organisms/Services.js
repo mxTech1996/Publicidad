@@ -31,7 +31,7 @@ const features = [
 
 const ConsultingServicesSection = () => {
   return (
-    <section className='bg-[#faf8f2] px-6 md:px-20 py-20'>
+    <section id='solution' className='bg-[#faf8f2] px-6 md:px-20 py-20'>
       {/* Top Feature Grid */}
       <h2 className='text-center text-3xl md:text-4xl font-bold text-[#0e0e23] mb-12'>
         The Best Solutions For Your Agency
