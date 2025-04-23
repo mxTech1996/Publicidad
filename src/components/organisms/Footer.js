@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <FooterComponent
-      backgroundColor='transparent'
+      backgroundColor='#faf8f2'
       legal={footerData}
       onRedirect={(path) => {
         window.open(path, '_blank');
